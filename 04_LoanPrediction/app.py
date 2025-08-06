@@ -4,10 +4,10 @@ import numpy as np
 import pickle
 
 # Load model
-# model = pickle.load(open("loan.pkl", "rb"))
+# model = pickle.load(open("04_LoanPrediction\loan.pkl", "rb"))
 import os
-if os.path.exists("loan.pkl"):
-    with open("loan.pkl", "rb") as f:
+if os.path.exists("04_LoanPrediction\loan.pkl"):
+    with open("04_LoanPrediction\loan.pkl", "rb") as f:
         model = pickle.load(f)
 else:
     st.error("Model file not found. Please upload loan.pkl.")
