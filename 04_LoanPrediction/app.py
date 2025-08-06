@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 
 # Load trained model
-model = pickle.load(open("loan.pkl", "rb"))
+model = pickle.load(open("04_LoanPrediction\loan.pkl", "rb"))
 
 st.set_page_config(page_title="Loan Prediction App", layout="centered")
 st.title("🏦 Loan Approval Prediction")
