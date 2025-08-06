@@ -43,3 +43,4 @@ if st.button("Predict"):
 
     result = "Approved ✅" if prediction[0] == 1 else "Rejected ❌"
     st.success(f"Loan Status: {result}")
+# done 
