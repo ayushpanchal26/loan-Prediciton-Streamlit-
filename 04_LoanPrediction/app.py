@@ -1,10 +1,19 @@
-# app.py
 import streamlit as st
-import pickle
+import pandas as pd
 import numpy as np
+import pickle
+import os
 
-# Load trained model
-model = pickle.load(open("04_LoanPrediction\loan.pkl", "rb"))
+# Use forward slashes for cross-platform compatibility
+MODEL_PATH = "04_LoanPrediction/loan.pkl"
+
+if os.path.exists(MODEL_PATH):
+    with open(MODEL_PATH, "rb") as f:
+        model = pickle.load(f)
+else:
+    st.error("❌ Model file not found. Make sure 'loan.pkl' is in '04_LoanPrediction/'")
+    st.stop()
+
 
 st.set_page_config(page_title="Loan Prediction App", layout="centered")
 st.title("🏦 Loan Approval Prediction")
